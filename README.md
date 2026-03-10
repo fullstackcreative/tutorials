@@ -14,9 +14,10 @@ This repository contains examples and projects used in my tutorials on:
 
 ## 📺 Follow FullStackCreative
 
-YouTube: www.youtube.com/@Full-StackCreative  
-Instagram: instagram.com/full.stackcreative
-Facebook: FullStackCreative  
+YouTube      : www.youtube.com/@Full-StackCreative
+Facebook     : facebook.com/fullstackcreative.dev
+Instagram    : instagram.com/full.stackcreative
+GitHub       : github.com/fullstackcreative
 
 ## 📂 Repository Structure
 
