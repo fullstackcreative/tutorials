@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #0a2f14, #000);
+  color: white;
+}
+.card {
+  position: relative;
+  cursor: pointer;
+  padding: 30px;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.card h3 {
+  margin-bottom: 10px;
+}
+.price {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+p {
+  font-size: 0.75rem;
+  margin-bottom: 10px;
+  padding: 3px 5px;
+  background: #0a2f14;
+  border-radius: 4px;
+}
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #1cff6a, #39ff9a);
+  color: #000;
+  font-weight: bold;
+}
+.card:hover {
+  transition: 0.3s;
+  transform: translateY(-2px);
+}
+.line {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(90deg, transparent, #39ff9a);
+}
+.line.top {
+  height: 1px;
+  width: 100%;
+  left: -100%;
+  top: 0;
+}
+.card:hover .top {
+  opacity: 1;
+  animation: runTop 1.2s linear infinite;
+}
+@keyframes runTop {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.line.right{
+  width:1px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent, #39ff9a);
+  top:0;
+  right:0;
+}
+.card:hover .right{
+  opacity:1;
+  animation: runRight 1.2s linear infinite;
+  animation-delay:0.3s;
+}
+@keyframes runRight {
+  0%{top:-100%}
+  100%{top:100%}
+  
+}
