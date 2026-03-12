@@ -25,11 +25,11 @@ GitHub    → https://github.com/fullstackcreative
 
 /tutorials  
 │  
-├── html  
-├── css-animation  
-├── css-games  
-├── javascript  
-└── chrome-extension  
+├── html-css  
+├── javascript 
+├── html games 
+├── action script 
+ 
 
 Each folder contains the source code used in the corresponding tutorial.
 
