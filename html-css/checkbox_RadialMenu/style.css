@@ -1,0 +1,87 @@
+
+body{
+  height:100vh;
+  display:grid;
+  place-items:center;
+  background:#111;
+}
+
+/* container */
+.game{
+  
+  width:400px;
+  height:400px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display:grid;
+  place-items:center; /* centers button */
+}
+:root{
+  --r:80px;
+}
+.menu{
+  position: relative;
+}
+.menu-btn{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #ff4757;
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size:30px;
+  cursor: pointer;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.item{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  background: #1e90ff;
+  color:#fff;
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50% ) scale(0);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.item:hover{
+  background: #00e05d;
+  opacity: 1;
+}
+#toggle:checked ~ .item1{
+  transform: translate(-50%, calc(-50% - var(--r))) scale(1);
+}
+#toggle:checked ~ .item2{
+  transform: translate(calc(-50% + 0.7*var(--r)), calc(-50% - 0.7*var(--r))) scale(1);
+}
+#toggle:checked ~ .item3{
+  transform: translate(calc(-50% + var(--r)), -50%) scale(1);
+}
+#toggle:checked ~ .item4{
+  transform: translate(calc(-50% + 0.7*var(--r)), calc(-50% + 0.7*var(--r))) scale(1);
+}
+#toggle:checked ~ .item5{
+  transform: translate(-50%, calc(-50% + var(--r))) scale(1);
+}
+#toggle:checked ~ .item6{
+  transform:translate(calc(-50% - 0.7*var(--r)), calc(-50% + 0.7*var(--r))) scale(1);
+}
+
+#toggle:checked ~ .item7{
+  transform:translate(calc(-50% - var(--r)), -50%) scale(1);
+}
+
+#toggle:checked ~ .item8{
+  transform:translate(calc(-50% - 0.7*var(--r)), calc(-50% - 0.7*var(--r))) scale(1);
+}
