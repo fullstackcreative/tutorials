@@ -1,0 +1,85 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center,#185db8,#000);
+  font-family:Arial, Helvetica, sans-serif;
+  gap:10px
+}
+.game {
+  width: 400px;
+  height: 200px;
+  border: 1px solid #122c5e;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  display: block;
+}
+
+
+.player {
+  width: 40px;
+  height: 40px;
+  background: #00f2ff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.game {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgb(6, 28, 100);
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background: red;
+  position: absolute;
+  bottom: 0px;
+  border-radius: 10px;
+}
+.keys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.key {
+  width: 60px;
+  height: 60px;
+  background: #222;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+/* Active state */
+.key.active {
+  background: #00ff88;
+  color: black;
+  transform: scale(1.1);
+}
