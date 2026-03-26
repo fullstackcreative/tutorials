@@ -1,0 +1,66 @@
+:root {
+  --neon-green: #39ff14;
+  --glow-strength: 10px;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at center, #0a2f14, #000);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.game {
+  width: 400px;
+  height: 400px;
+  border: 1px solid var(--neon-green);
+  overflow: hidden;
+  position: relative;
+}
+
+.monitor {
+  position: relative;
+  width: 800px;
+  height: 100%;
+  background:
+    linear-gradient(#00ff663d 1px, transparent 1px),
+    linear-gradient(90deg, #00ff663d, 1px, transparent 1px);
+  background-size: 40px 40px;
+ 
+}
+
+.ecg-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.heartbeat {
+  fill: none;
+  stroke: var(--neon-green);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  /* The Fluorescent Glow Effect */
+  filter: drop-shadow(0 0 2px #fff)
+    drop-shadow(0 0 var(--glow-strength) var(--neon-green))
+    drop-shadow(0 0 20px #004400);
+
+  /* Animation Logic */
+  stroke-dasharray: 800; /* Length of the path */
+  stroke-dashoffset: 800;
+  animation: draw 3s linear infinite;
+}
+
+/* The drawing animation */
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 800;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+circle {
+  filter: drop-shadow(0 0 6px #39ff14) drop-shadow(0 0 12px #39ff14)
+    drop-shadow(0 0 20px #39ff14);
+}

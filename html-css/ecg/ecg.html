@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ECG</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ecg.css" />
+  </head>
+  <body>
+    <div class="game">
+      <div class="monitor">
+        <svg viewBox="0 0 800 200" class="ecg-svg">
+          <path
+            id="ecgPath"
+            class="heartbeat"
+            d="M0,100 L100,100 L110,85 L120,100 L140,100 L150,30 L170,170 L190,100 L210,100 L230,70 L250,100 L800,100"
+          />
+          <!-- Moving glowing tip -->
+          <circle r="5" fill="#39ff14">
+            <animateMotion dur="3s" repeatCount="indefinite">
+              <mpath href="#ecgPath" />
+            </animateMotion>
+
+            <!-- Glow -->
+            <animate
+              attributeName="r"
+              values="3;6;3"
+              dur="0.7s"
+              repeatCount="indefinite"
+            />
+          </circle>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
