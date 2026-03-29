@@ -1,0 +1,76 @@
+:root {
+  --neon-green: #39ff14;
+  --glow-strength: 10px;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at center, #0a2f14, #000);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+.container {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #111;
+  border-radius: 30px;
+  padding: 5px;
+  width: 400px;
+  border: 1px solid #32802b34;
+  filter: drop-shadow(0 0 2px #2b2727) drop-shadow(0 0 1px var(--neon-green))
+    drop-shadow(0 0 1px #000000);
+}
+.toggle input {
+  display: none;
+}
+.toggle label {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  color: #aaa;
+  font-weight: 500;
+  z-index: 1;
+}
+#t1:checked ~ label[for="t1"],
+#t2:checked
+  ~ label[for="t2"],
+  #t3:checked
+  ~ label[for="t3"],
+  #t4:checked
+  ~ label[for="t4"] {
+  color: #000;
+}
+.slider {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: calc((100% - 10px) / 4);
+  height: calc(100% - 10px);
+  background: #39ff14;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+#t1:checked ~ .slider {
+  transform: translateX(0%);
+}
+#t2:checked ~ .slider {
+  transform: translateX(100%);
+}
+#t3:checked ~ .slider {
+  transform: translateX(200%);
+}
+#t4:checked ~ .slider {
+  transform: translateX(300%);
+}
