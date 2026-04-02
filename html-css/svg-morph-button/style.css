@@ -1,0 +1,57 @@
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at center, #0a2f14, #000);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(0deg, #066326, #15b864);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+svg {
+  width: 80px;
+}
+
+path {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all 0.8s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.first {
+  stroke-dasharray: 56 152;
+  stroke-dashoffset: 208;
+}
+.second {
+  stroke-dasharray: 56 336;
+  stroke-dashoffset: 56;
+}
+.third {
+  stroke-dasharray: 56 171;
+  stroke-dashoffset: 227;
+}
+
+.button.active .first {
+  stroke-dasharray: 58 149;
+  stroke-dashoffset: 58;
+}
+.button.active .second {
+  stroke-dasharray: 315 76;
+  stroke-dashoffset: 389;
+}
+.button.active .third {
+  stroke-dasharray: 58 169;
+  stroke-dashoffset: 58;
+}
